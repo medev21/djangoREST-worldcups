@@ -9,7 +9,7 @@ from rest_framework.response import Response
 # Create your views here.
 
 
-class WorlcupViewSet(viewsets.ModelViewSet):
+class WorldcupViewSet(viewsets.ModelViewSet):
     queryset = Worldcup.objects.all()
     serializer_class = WorlcupSerializer
     permission_class = (permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly,)
