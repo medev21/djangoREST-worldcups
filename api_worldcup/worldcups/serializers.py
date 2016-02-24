@@ -2,7 +2,7 @@ from rest_framework import serializers
 from worlcups.models import Worldcup
 from django.contrib.auth.models import User
 
-class WorlcupSerializer(serializers.HyperlinkedModelSerializer):
+class WorldcupSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.ReadOnlyField(source = 'owner.username')
 
     class Meta:
