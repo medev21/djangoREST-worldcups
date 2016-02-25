@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from worlcups.models import Worldcup
-from worlcups.permissions import IsOwnerOrReadOnly
-from worlcups.serializers import WorldcupSerializer, UserSerializer
+from worldcups.models import Worldcup
+from worldcups.permissions import IsOwnerOrReadOnly
+from worldcups.serializers import WorldcupSerializer, UserSerializer
 from django.contrib.auth.models import User
 from rest_framework import generics, viewsets, permissions, renderers
 from rest_framework.decorators import detail_route
@@ -11,7 +11,7 @@ from rest_framework.response import Response
 
 class WorldcupViewSet(viewsets.ModelViewSet):
     queryset = Worldcup.objects.all()
-    serializer_class = WorlcupSerializer
+    serializer_class = WorldcupSerializer
     permission_class = (permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly,)
 
     @detail_route(renderer_classes = [renderers.StaticHTMLRenderer])

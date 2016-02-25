@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from worlcups.models import Worldcup
+from worldcups.models import Worldcup
 from django.contrib.auth.models import User
 
 class WorldcupSerializer(serializers.HyperlinkedModelSerializer):
